@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NoBody SOCIAL</title>
+    <link rel="stylesheet" href="css/index.css">
+    <style>
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="profile">
+                <img src="" alt="Profile Picture" id="profile-pic" onclick="openProfileSettings()">
+                <p class="greeting">Welcome back, <span class="username"></span>!</p>
+                <button id="new-post-btn" onclick="openPostModal()">+</button>
+            </div>
+            <h1 class="the-app-name">NoBody Social</h1>
+        </header>
+
+        
+
+        <div id="post-form-modal">
+            <div class="modal-content">
+                <h2>Create a New Post</h2>
+                <input type="text" id="post-title" placeholder="Title">
+                <textarea id="post-description" placeholder="Do your post..."></textarea>
+                <input type="text" id="post-media-link" placeholder="Image/Video URL (Optional)">
+                <input type="file" id="fileInput" style="display: none;">
+                <button id="feridinhaStart" onclick="uploadToFeridinha()" style="display: none;">Upload</button>
+                <br>
+                <button id="feridinhaBtn" onclick="toggleFileInput()">Use Ferdinha</button>
+                <button onclick="createPost()">Post Memory</button>
+            </div>
+        </div>
+        <h1 class="title">Your Posts!</h1>
+        <section id="posts"></section>
+    </div>
+
+    <div id="profile-settings-modal">
+        <div class="modal-content">
+            <h2>Profile Settings</h2>
+            <input type="file" id="new-profile-pic" onchange="updateProfilePicture()">
+            <input type="text" id="new-name" placeholder="Enter new name" value="">
+            <button onclick="saveName()">Save</button>
+            <button onclick="closeProfileSettings()">Close</button>
+        </div>
+    </div>
+<footer>
+    <p>Everything is under GPL-3 :3 | Website idea was from <a href="https://github.com/wish13yt">Wish</a> but <i>better</i> :3</p>
+</footer>
+<script src="js/index.js"></script>
+</body>
+</html>
